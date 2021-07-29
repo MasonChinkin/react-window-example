@@ -3,8 +3,6 @@ import faker from 'faker';
 import { FixedSizeList as List } from 'react-window';
 import './App.css';
 
-let getId = () => Math.random().toString(36).substring(7);
-
 const ReactWindowRow = ({ data, index, style }) => {
   return (
     <div
@@ -36,10 +34,10 @@ const RowComponent = ({ rowId, rowIdx, array, handleDeleteClick }) => {
 
 const App = () => {
   const [data, setData] = useState([
-    ...Array(10000)
+    ...Array(1000)
       .fill({})
       .map((obj, i) => ({
-        rowId: getId(),
+        rowId: Math.random().toString(36).substring(7),
         array: [
           'delete',
           faker.name.findName(),
