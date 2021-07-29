@@ -36,7 +36,7 @@ const RowComponent = ({ rowId, rowIdx, array, handleDeleteClick }) => {
 
 const App = () => {
   const [data, setData] = useState([
-    ...Array(1000)
+    ...Array(10000)
       .fill({})
       .map((obj, i) => ({
         rowId: getId(),
